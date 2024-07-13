@@ -19,10 +19,69 @@ Where:
 - **Top 3000 stocks:** The strategy applies to the top 3000 stocks by market capitalization or liquidity.
 - **Subindustry neutralization:** The portfolio is balanced to have an equal weight of long and short positions within each subindustry, reducing subindustry-wide risk.
 
-### Strategy Logic
+### Alpha Strategy: Hot News with Reversion
+
+#### Strategy Logic
 
 #### Concept
-This alpha strategy combines momentum based on news with a reversion strategy. It buys stocks that are relatively newsworthy compared to their peers within the same subindustry. For stocks with less news coverage, it applies a simple price reversion strategy.
+This alpha strategy blends two distinct approaches: momentum based on news and a price reversion strategy. The goal is to leverage the influence of news on stock prices while also capitalizing on the natural tendency of stock prices to revert to their mean.
+
+**Key Components:**
+
+1. **News-Based Momentum:**
+   - Stocks that are frequently mentioned in the news and have positive sentiment tend to gain investor attention, which can drive prices up.
+   - By ranking stocks based on their news coverage and sentiment, the strategy identifies which stocks are currently receiving significant attention.
+
+2. **Price Reversion for Less Newsworthy Stocks:**
+   - For stocks that are not receiving much news coverage, the strategy assumes that their prices might still revert to their mean. This is based on the mean reversion principle, where prices tend to move back to their average levels over time.
+
+3. **Subindustry Neutralization:**
+   - By neutralizing positions within subindustries, the strategy reduces the risk of broad sector movements and focuses on relative performance within each subindustry.
+
+#### Execution
+1. **Calculate Average News Impact:**
+   - Determine the average news sentiment or score for each stock over a period.
+2. **Sum News Impact over 60 Days:**
+   - Sum the average news scores over the past 60 days for each stock.
+3. **Rank News Impact:**
+   - Rank the stocks based on the summed news impact. If the rank is above the median (0.5), it suggests significant news coverage.
+4. **Decision Rule:**
+   - If a stock’s news rank is above the median (0.5), assign a buy signal based on news momentum.
+   - If a stock’s news rank is below the median, apply a price reversion strategy by ranking the negative 2-day price change and buying the higher-ranked stocks.
+
+#### Why It Works
+
+**Example:**
+
+Imagine we have two stocks, Stock A and Stock B, both in the top 3000 by market capitalization. We analyze their news coverage and price movements over the last 60 days.
+
+1. **Calculate Average News Impact:**
+   - **Stock A:** Receives frequent positive mentions in news articles.
+   - **Stock B:** Receives little to no news coverage.
+
+2. **Sum News Impact over 60 Days:**
+   - **Stock A:** Sum of average news sentiment scores over 60 days is high.
+   - **Stock B:** Sum of average news sentiment scores over 60 days is low.
+
+3. **Rank News Impact:**
+   - **Stock A:** Ranks high based on summed news impact, indicating it is relatively newsworthy.
+   - **Stock B:** Ranks low based on summed news impact.
+
+4. **Decision Rule:**
+   - **Stock A:** Since its news rank is above the median (0.5), it gets a buy signal based on news momentum.
+   - **Stock B:** Since its news rank is below the median, apply a price reversion strategy:
+     - Rank the negative 2-day price change. If Stock B has a significant price drop over the last 2 days, it may be considered for a buy signal based on the expectation of mean reversion.
+
+**Why It Works:**
+
+1. **News Impact on Prices:**
+   - Positive news coverage can drive investor interest and buying activity, leading to higher stock prices. This momentum can be captured by buying stocks with significant news coverage.
+
+2. **Mean Reversion:**
+   - Stocks that do not receive much news coverage might still follow mean reversion patterns. When these stocks experience a significant price drop, they are likely to revert to their mean price, providing a buying opportunity.
+
+3. **Subindustry Neutralization:**
+   - By balancing positions within subindustries, the strategy minimizes exposure to broad sector movements and focuses on the relative performance of stocks within each subindustry. This helps isolate the impact of news and price reversion from general market or sector trends.
 
 #### Execution
 1. **Calculate Average News Impact:**
