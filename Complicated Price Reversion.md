@@ -2,11 +2,9 @@
 
 #### Alpha Formula
 **Formula:**
-\[ \text{Alpha} = \frac{\text{Decline Percentage}}{\min(\text{Linear Decay of Relative Days Since Max}, 0.15)} \]
-Where:
-\[ \text{Decline Percentage} = \frac{\text{VWAP} - \text{Close}}{\text{Close}} \]
-\[ \text{Relative Days Since Max} = \text{Rank}(\text{Time Since Max}) \]
-\[ \text{Time Since Max} = \text{ts\_arg\_max}(\text{Close}, 30) \]
+rel_days_since_max = rank(ts_arg_max(close, 30));
+decline_pct = (vwap - close) / close;
+decline_pct / min( ts_decay_linear(rel_days_since_max, 1), 0.15)
 
 #### Data Fields:
 - **VWAP (Volume-Weighted Average Price):** An average price that takes into account the volume traded at different prices.
