@@ -1,6 +1,6 @@
 # basic-world-quant-alphas
 
-Some basic alphas I submitted using my time at World Quant as QR:
+Some basic alphas I submitted during my time at WorldQuant as QR:
 
 1. [Complicated Price Reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Complicated%20Price%20Reversion.md)
 2. [Hot news with reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Hot%20news%20with%20reversion.md)
