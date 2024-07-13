@@ -61,3 +61,11 @@ This alpha strategy is based on **mean reversion**, a concept that suggests pric
 - **Backtesting:** Appreciate the value of historical backtesting to validate strategies before real-world application.
 
 This alpha demonstrates that even simple strategies can yield significant returns when properly tested and executed, providing a solid foundation for further exploration into more complex quantitative finance strategies.
+
+---
+
+1. [Complicated Price Reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Complicated%20Price%20Reversion.md)
+2. [Hot news with reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Hot%20news%20with%20reversion.md)
+3. [Short Overpriced Companies](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Short%20Overpriced%20Companies.md)
+4. [Simple Price Reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Simple%20Price%20Reversion.md)
+5. [Too much buzz is bad](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Too%20much%20buzz%20is%20bad.md)
