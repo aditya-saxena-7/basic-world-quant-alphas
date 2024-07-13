@@ -89,3 +89,11 @@ This alpha strategy focuses on shorting stocks that are experiencing a significa
 - **Backtesting:** Appreciate the value of historical backtesting to validate strategies before real-world application.
 
 This strategy highlights how social media buzz can be a powerful indicator of stock overvaluation, and how combining this with fundamental analysis and neutralization techniques can lead to robust investment strategies.
+
+---
+
+1. [Complicated Price Reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Complicated%20Price%20Reversion.md)
+2. [Hot news with reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Hot%20news%20with%20reversion.md)
+3. [Short Overpriced Companies](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Short%20Overpriced%20Companies.md)
+4. [Simple Price Reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Simple%20Price%20Reversion.md)
+5. [Too much buzz is bad](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Too%20much%20buzz%20is%20bad.md)
