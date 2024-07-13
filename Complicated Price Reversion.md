@@ -17,10 +17,53 @@ decline_pct / min( ts_decay_linear(rel_days_since_max, 1), 0.15)
 - **Top 200 stocks:** The strategy applies to the top 200 stocks by market capitalization or liquidity.
 - **Market neutralization:** The portfolio is balanced to have an equal weight of long and short positions across the market.
 
-### Strategy Logic
+### Alpha Strategy: Complicated Price Reversion
+
+#### Strategy Logic
 
 #### Concept
-This alpha strategy is a refined version of the simple price reversion idea. It incorporates the concept of **relative time since the stock's peak** to identify stocks that have recently experienced a maximum price and then declined. The use of VWAP instead of the simple average price provides a more accurate measure of the average price.
+This alpha strategy enhances the simple price reversion idea by incorporating the concept of **relative time since the stock's peak** and using the **Volume-Weighted Average Price (VWAP)** instead of the simple average price. The idea is to identify stocks that have recently experienced a maximum price (a peak) and then declined, with the assumption that these stocks are likely to revert to their mean price. This mean reversion tendency can be exploited for profit.
+
+**Key Enhancements:**
+
+1. **Relative Time Since Peak:** 
+   - This concept identifies how long it has been since the stock hit its highest price within a specified period (30 days in this case). Stocks that have recently peaked might be more likely to revert to their average price.
+   - The strategy ranks stocks based on how recent their peak was, with the assumption that more recent peaks might have a stronger reversion tendency.
+
+2. **VWAP (Volume-Weighted Average Price):** 
+   - VWAP is considered a more accurate measure of the average price because it takes into account the volume of trades at different prices, rather than just the simple average of high and low prices.
+   - This ensures that the strategy considers the price levels at which most trading occurred, providing a more realistic view of the stock's average value.
+
+#### Why It Works
+
+**Example:**
+Imagine we have two stocks, Stock A and Stock B, both in the top 200 by market capitalization. We analyze their price movements and VWAP over the last 30 days.
+
+1. **Calculate Relative Time Since Peak:**
+   - **Stock A:** Hit its highest price of $150 two days ago. Current price is $140.
+   - **Stock B:** Hit its highest price of $120 fifteen days ago. Current price is $110.
+
+   Stock A's peak is more recent, so it gets a higher rank in terms of relative time since the peak.
+
+2. **Calculate Decline Percentage:**
+   - **Stock A:** VWAP = $145, Current price = $140.
+     \[ \text{Decline Percentage} = \frac{145 - 140}{140} \approx 0.036 \text{ or 3.6%} \]
+   - **Stock B:** VWAP = $115, Current price = $110.
+     \[ \text{Decline Percentage} = \frac{115 - 110}{110} \approx 0.045 \text{ or 4.5%} \]
+
+3. **Compute the Alpha Value:**
+   - For Stock A:
+     \[ \text{Alpha} = \frac{0.036}{\min(\text{Linear Decay of Relative Days Since Max}, 0.15)} \]
+   - For Stock B:
+     \[ \text{Alpha} = \frac{0.045}{\min(\text{Linear Decay of Relative Days Since Max}, 0.15)} \]
+
+   Assuming the linear decay value for Stock A (recent peak) is lower than 0.15, and for Stock B (older peak) it's higher, Stock A's alpha value will be higher, indicating a stronger buy signal.
+
+**Why It Works:**
+
+1. **Mean Reversion:** Stocks that have recently peaked and then declined are likely to revert to their average price. This mean reversion tendency can be exploited for profit.
+2. **Accurate Average Price:** Using VWAP provides a more accurate measure of the average price, taking into account the volume of trades at different prices. This ensures that the strategy is based on realistic average values rather than simple averages.
+3. **Relative Timing:** By focusing on the time since the last peak, the strategy targets stocks that have a stronger potential for mean reversion. Stocks that have recently peaked might have been overbought and are now more likely to revert to their average price.
 
 #### Execution
 1. **Calculate Relative Days Since Max:**
