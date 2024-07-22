@@ -70,3 +70,13 @@ Imagine we have two companies, Company A and Company B. We will compare their pr
 
 ### Summary
 This alpha strategy leverages fundamental metrics to identify stocks with improving profitability relative to their size. By calculating and tracking the ratio of profit to size over time, the strategy can pinpoint companies that are becoming more efficient and potentially undervalued. The example illustrates how this concept is applied and why it works, highlighting the benefits of using fundamental analysis to drive investment decisions.
+
+---
+
+1. [Simple Price Reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Simple%20Price%20Reversion.md)
+2. [Complicated Price Reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Complicated%20Price%20Reversion.md)
+3. [Hot news with reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Hot%20news%20with%20reversion.md)
+4. [Short Overpriced Companies](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Short%20Overpriced%20Companies.md)
+5. [Too much buzz is bad](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Too%20much%20buzz%20is%20bad.md)
+6. [Profitability Compared to Capitalization](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Compared%20to%20Capitalization.md)
+7. [Net Sentiment Analysis](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Net%20Sentiment%20Analysis.md)
