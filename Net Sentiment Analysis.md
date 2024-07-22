@@ -109,3 +109,13 @@ Imagine we have two companies, Company A and Company B. We will analyze their se
 
 ### Summary
 This alpha strategy leverages sentiment analysis to identify stocks with improving market perception. By calculating and ranking sentiment data, handling missing values, and applying time series analysis, the strategy can pinpoint stocks that are gaining positive sentiment over time. The example illustrates how the strategy evaluates sentiment trends and why it works, highlighting the benefits of using sentiment analysis to drive investment decisions.
+
+---
+
+1. [Simple Price Reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Simple%20Price%20Reversion.md)
+2. [Complicated Price Reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Complicated%20Price%20Reversion.md)
+3. [Hot news with reversion](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Hot%20news%20with%20reversion.md)
+4. [Short Overpriced Companies](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Short%20Overpriced%20Companies.md)
+5. [Too much buzz is bad](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Too%20much%20buzz%20is%20bad.md)
+6. [Profitability Compared to Capitalization](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Compared%20to%20Capitalization.md)
+7. [Net Sentiment Analysis](https://github.com/aditya-saxena-7/basic-world-quant-alphas/blob/main/Net%20Sentiment%20Analysis.md)
