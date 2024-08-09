@@ -31,7 +31,7 @@ If the risk-free rate is 2%, the Sharpe Ratios would be:
 - **Investment B:** \(\frac{12\% - 2\%}{10\%} = 1.0\)
 
 **Layman Explanation:**
-The Sharpe Ratio tells you how much return you are getting for each unit of risk. A higher Sharpe Ratio means better risk-adjusted performance. So, Investment A is better because you get more return for each unit of risk compared to Investment B.
+The Sharpe Ratio tells you how much return you are getting for each unit of risk. A higher Sharpe Ratio means better risk-adjusted performance. So, Investment A is better because you get more return for each unit of risk compared to the Investment B.
 
 ### 2. Sortino Ratio 📉
 
